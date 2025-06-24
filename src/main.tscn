@@ -47,6 +47,7 @@ offset_right = 74.0
 offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 0
+focus_mode = 0
 text = "Start"
 
 [node name="PlusButton" type="Button" parent="StartScreen"]
@@ -61,6 +62,7 @@ offset_right = 84.0
 offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 0
 text = "+"
 
 [node name="MinusButton" type="Button" parent="StartScreen"]
@@ -75,6 +77,7 @@ offset_right = -40.0
 offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 0
 text = "-"
 
 [node name="PlayerCounter" type="Label" parent="StartScreen"]
@@ -211,6 +214,7 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_mode = 0
 text = "50"
 script = ExtResource("5_srxbw")
 
@@ -218,6 +222,7 @@ script = ExtResource("5_srxbw")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_mode = 0
 text = "100
 "
 script = ExtResource("6_d3u4l")
@@ -226,6 +231,7 @@ script = ExtResource("6_d3u4l")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_mode = 0
 text = "1000"
 script = ExtResource("7_mlv6i")
 
@@ -233,6 +239,7 @@ script = ExtResource("7_mlv6i")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_mode = 0
 text = "200"
 script = ExtResource("8_tb146")
 
@@ -240,6 +247,7 @@ script = ExtResource("8_tb146")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_mode = 0
 text = "300"
 script = ExtResource("9_e7lu8")
 
@@ -247,6 +255,7 @@ script = ExtResource("9_e7lu8")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_mode = 0
 text = "400"
 script = ExtResource("10_okx7f")
 
@@ -254,6 +263,7 @@ script = ExtResource("10_okx7f")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_mode = 0
 text = "500	"
 script = ExtResource("11_sta5p")
 
@@ -261,6 +271,7 @@ script = ExtResource("11_sta5p")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_mode = 0
 text = "600
 "
 script = ExtResource("12_sif16")
@@ -277,6 +288,7 @@ offset_right = 83.5
 offset_bottom = -91.5
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 0
 text = "Postupka"
 script = ExtResource("13_d7bab")
 
@@ -292,6 +304,7 @@ offset_right = -20.0
 offset_bottom = -20.0
 grow_horizontal = 0
 grow_vertical = 0
+focus_mode = 0
 text = "Další"
 
 [node name="PreviousPlayer" type="Button" parent="PlayScreen"]
@@ -303,6 +316,7 @@ offset_top = -61.0
 offset_right = 104.0
 offset_bottom = -20.0
 grow_vertical = 0
+focus_mode = 0
 text = "Předchozí"
 
 [node name="Fix" type="Button" parent="PlayScreen"]
@@ -317,6 +331,7 @@ offset_right = 42.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
+focus_mode = 0
 toggle_mode = true
 text = "Oprava"
 
@@ -329,6 +344,7 @@ offset_top = 10.0
 offset_right = -10.0
 offset_bottom = 46.0
 grow_horizontal = 0
+focus_mode = 0
 text = "Reset"
 
 [node name="ScoreScreen" type="CanvasLayer" parent="."]
@@ -355,6 +371,7 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 80.0
 offset_bottom = 46.0
+focus_mode = 0
 toggle_mode = true
 text = "Skóre"
 
