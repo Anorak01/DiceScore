@@ -1,0 +1,380 @@
+[gd_scene load_steps=18 format=3 uid="uid://cgqgd5m7fv40h"]
+
+[ext_resource type="Script" uid="uid://b6qgcb6y5xamq" path="res://src/main.gd" id="1_eewff"]
+[ext_resource type="Script" uid="uid://b7ug3wn58x5hv" path="res://src/player_counter.gd" id="2_gh0ne"]
+[ext_resource type="Script" uid="uid://pig6nwom31xr" path="res://src/player_label.gd" id="3_5q4o7"]
+[ext_resource type="Script" uid="uid://bh2ow4gvgh3g8" path="res://src/score_label.gd" id="4_3cfgd"]
+[ext_resource type="Script" uid="uid://ciiv6gj667ufx" path="res://src/50.gd" id="5_srxbw"]
+[ext_resource type="Script" uid="uid://n1k1hh35uao1" path="res://src/100.gd" id="6_d3u4l"]
+[ext_resource type="Script" uid="uid://dym8gm74p4e0y" path="res://src/1000.gd" id="7_mlv6i"]
+[ext_resource type="Script" uid="uid://blckiewvoua16" path="res://src/200.gd" id="8_tb146"]
+[ext_resource type="Script" uid="uid://by1umeyg0rmpp" path="res://src/300.gd" id="9_e7lu8"]
+[ext_resource type="Script" uid="uid://li2usmcggob0" path="res://src/400.gd" id="10_okx7f"]
+[ext_resource type="Script" uid="uid://bvay7t17mnmrk" path="res://src/500.gd" id="11_sta5p"]
+[ext_resource type="Script" uid="uid://bbobevut8ygei" path="res://src/600.gd" id="12_sif16"]
+[ext_resource type="Script" uid="uid://c0q4eljfinv5v" path="res://src/jackpot.gd" id="13_d7bab"]
+[ext_resource type="Script" uid="uid://dudeviwtu0xa3" path="res://src/item_list.gd" id="14_d3u4l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d3u4l"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_3cfgd"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_fyndt"]
+font_size = 24
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eewff")
+
+[node name="StartScreen" type="CanvasLayer" parent="."]
+
+[node name="StartButton" type="Button" parent="StartScreen"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -74.0
+offset_top = -71.0
+offset_right = 74.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Start"
+
+[node name="PlusButton" type="Button" parent="StartScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -22.0
+offset_right = 84.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "+"
+
+[node name="MinusButton" type="Button" parent="StartScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -22.0
+offset_right = -40.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "-"
+
+[node name="PlayerCounter" type="Label" parent="StartScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -22.0
+offset_right = 40.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_gh0ne")
+
+[node name="PlayerLabel" type="Label" parent="StartScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -66.0
+offset_right = 40.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hráči"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JackpotLabel" type="Label" parent="StartScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -170.0
+offset_right = 46.0
+offset_bottom = -142.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Postupka"
+label_settings = SubResource("LabelSettings_d3u4l")
+
+[node name="JackpotValueLabel" type="Label" parent="StartScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.5
+offset_top = -137.5
+offset_right = 36.5
+offset_bottom = -114.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JackpotSlider" type="HSlider" parent="StartScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = -118.5
+offset_right = 120.5
+offset_bottom = -91.5
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 1000.0
+max_value = 5000.0
+step = 100.0
+value = 1500.0
+
+[node name="PlayScreen" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PlayerLabel" type="Label" parent="PlayScreen"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.0
+offset_top = 10.0
+offset_right = 53.0
+offset_bottom = 49.0
+grow_horizontal = 2
+text = "Hráč 1"
+label_settings = SubResource("LabelSettings_3cfgd")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_5q4o7")
+
+[node name="ScoreLabel" type="Label" parent="PlayScreen"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = 49.0
+offset_right = 91.5
+offset_bottom = 145.0
+grow_horizontal = 2
+text = "Body: 0"
+label_settings = SubResource("LabelSettings_fyndt")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_3cfgd")
+
+[node name="PointButtons" type="GridContainer" parent="PlayScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -86.0
+offset_right = 163.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="50" type="Button" parent="PlayScreen/PointButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "50"
+script = ExtResource("5_srxbw")
+
+[node name="100" type="Button" parent="PlayScreen/PointButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "100
+"
+script = ExtResource("6_d3u4l")
+
+[node name="1000" type="Button" parent="PlayScreen/PointButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "1000"
+script = ExtResource("7_mlv6i")
+
+[node name="200" type="Button" parent="PlayScreen/PointButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "200"
+script = ExtResource("8_tb146")
+
+[node name="300" type="Button" parent="PlayScreen/PointButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "300"
+script = ExtResource("9_e7lu8")
+
+[node name="400" type="Button" parent="PlayScreen/PointButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "400"
+script = ExtResource("10_okx7f")
+
+[node name="500" type="Button" parent="PlayScreen/PointButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "500	"
+script = ExtResource("11_sta5p")
+
+[node name="600" type="Button" parent="PlayScreen/PointButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "600
+"
+script = ExtResource("12_sif16")
+
+[node name="Jackpot" type="Button" parent="PlayScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.5
+offset_top = -132.5
+offset_right = 83.5
+offset_bottom = -91.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Postupka"
+script = ExtResource("13_d7bab")
+
+[node name="NextPlayer" type="Button" parent="PlayScreen"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -61.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Další"
+
+[node name="PreviousPlayer" type="Button" parent="PlayScreen"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -61.0
+offset_right = 104.0
+offset_bottom = -20.0
+grow_vertical = 0
+text = "Předchozí"
+
+[node name="Fix" type="Button" parent="PlayScreen"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -61.0
+offset_right = 42.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+toggle_mode = true
+text = "Oprava"
+
+[node name="ResetButton" type="Button" parent="PlayScreen"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 46.0
+grow_horizontal = 0
+text = "Reset"
+
+[node name="ScoreScreen" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ItemList" type="ItemList" parent="ScoreScreen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.5
+offset_top = -228.0
+offset_right = 161.5
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_d3u4l")
+
+[node name="ScoreButton" type="Button" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 80.0
+offset_bottom = 46.0
+toggle_mode = true
+text = "Skóre"
+
+[connection signal="player_cnt_update" from="." to="StartScreen/PlayerCounter" method="_on_main_player_cnt_update"]
+[connection signal="player_index_update" from="." to="PlayScreen/PlayerLabel" method="_on_main_player_index_update"]
+[connection signal="player_score_label_update" from="." to="PlayScreen/ScoreLabel" method="_on_main_player_score_label_update"]
+[connection signal="pressed" from="StartScreen/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartScreen/PlusButton" to="." method="_on_plus_button_pressed"]
+[connection signal="pressed" from="StartScreen/MinusButton" to="." method="_on_minus_button_pressed"]
+[connection signal="value_changed" from="StartScreen/JackpotSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="PlayScreen/PointButtons/50" to="PlayScreen/PointButtons/50" method="_on_pressed"]
+[connection signal="pressed" from="PlayScreen/PointButtons/100" to="PlayScreen/PointButtons/100" method="_on_pressed"]
+[connection signal="pressed" from="PlayScreen/PointButtons/1000" to="PlayScreen/PointButtons/1000" method="_on_pressed"]
+[connection signal="pressed" from="PlayScreen/PointButtons/200" to="PlayScreen/PointButtons/200" method="_on_pressed"]
+[connection signal="pressed" from="PlayScreen/PointButtons/300" to="PlayScreen/PointButtons/300" method="_on_pressed"]
+[connection signal="pressed" from="PlayScreen/PointButtons/400" to="PlayScreen/PointButtons/400" method="_on_pressed"]
+[connection signal="pressed" from="PlayScreen/PointButtons/500" to="PlayScreen/PointButtons/500" method="_on_pressed"]
+[connection signal="pressed" from="PlayScreen/PointButtons/600" to="PlayScreen/PointButtons/600" method="_on_pressed"]
+[connection signal="pressed" from="PlayScreen/Jackpot" to="." method="_on_jackpot_pressed"]
+[connection signal="pressed" from="PlayScreen/NextPlayer" to="." method="_on_next_player_pressed"]
+[connection signal="pressed" from="PlayScreen/PreviousPlayer" to="." method="_on_previous_player_pressed"]
+[connection signal="pressed" from="PlayScreen/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="toggled" from="ScoreButton" to="." method="_on_score_toggled"]
