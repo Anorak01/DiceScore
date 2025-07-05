@@ -1,6 +1,6 @@
 extends ItemList
 
-func init(scores: Dictionary[int, int]):
+func init(players: Dictionary[int, Player]):
 	self.clear()
-	for player in scores.keys():
-		self.add_item("Hráč " + str(player) + ": " + str(scores[player]))
+	for player in players.keys():
+		self.add_item("Hráč " + str(player) + ": " + str(players[player].score))
